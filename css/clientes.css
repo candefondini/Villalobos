@@ -1,0 +1,54 @@
+.clientes{
+    padding:90px 0;
+    background:#fff;
+}
+
+.clientes-title{
+    text-align:center;
+    color:#ea4b3c;
+    font-size:42px;
+    font-weight:900;
+    margin-bottom:60px;
+}
+
+.logos-slider{
+    overflow:hidden;
+    width:100%;
+}
+
+.logos-track{
+    display:flex;
+    align-items:center;
+    gap:90px;
+
+    width:max-content;
+
+    animation: logosScroll 30s linear infinite;
+}
+
+.logos-track img{
+    height:80px;
+    width:auto;
+
+    filter: grayscale(100%);
+    opacity:.75;
+
+    transition:.3s;
+}
+
+.logos-track img:hover{
+    filter:none;
+    opacity:1;
+}
+
+@keyframes logosScroll{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+
+}

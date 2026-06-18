@@ -1,0 +1,86 @@
+.topbar{
+    background:#23384e;
+    color:#ff5a4a;
+    text-align:center;
+    padding:8px 10px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.header{
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:12px 40px;
+    border-bottom:1px solid #ececec;
+    min-height:86px;
+}
+
+.logo img{
+    width:200px;
+}
+
+.search-box{
+    flex:1;
+    max-width:660px;
+    margin:0 35px;
+    position:relative;
+}
+
+.search-box input{
+    width:100%;
+    height:46px;
+    border:2px solid #ea4b3c;
+    border-radius:12px;
+    padding:0 55px 0 18px;
+    font-size:15px;
+}
+
+.search-box button{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    background:none;
+    border:none;
+    color:#ea4b3c;
+    font-size:22px;
+}
+
+.header-icons{
+    display:flex;
+    gap:28px;
+}
+
+.icon-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    color:#ea4b3c;
+    gap:5px;
+}
+
+.icon-item i{
+    font-size:23px;
+}
+
+.icon-item span{
+    font-size:13px;
+    font-weight:700;
+}
+
+.menu{
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    gap:45px;
+    padding:15px;
+    border-bottom:1px solid #ececec;
+}
+
+.menu a{
+    color:#ea4b3c;
+    text-decoration:none;
+    font-size:17px;
+}

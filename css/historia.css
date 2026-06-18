@@ -1,0 +1,90 @@
+.historia{
+    padding:60px 0 0px;
+    background:#fff;
+}
+
+.historia-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.historia-tag{
+    display:inline-block;
+    color:#ea4b3c;
+    font-size:14px;
+    font-weight:800;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+
+.historia h2{
+    font-size:48px;
+    line-height:1.05;
+    margin-bottom:25px;
+    font-weight:900;
+    color:#222;
+}
+
+.historia p{
+    font-size:17px;
+    line-height:1.8;
+    color:#666;
+    margin-bottom:20px;
+}
+
+.historia-image img{
+    width:100%;
+    border-radius:24px;
+    object-fit:cover;
+}
+
+.historia-cta{
+    margin-top:40px;
+    text-align:center;
+    background:#f8f8f8;
+    padding:0px;
+    border-radius:30px;
+}
+
+.historia-cta h3{
+    font-size:38px;
+    line-height:1.1;
+    margin-bottom:15px;
+    font-weight:900;
+    color:#222;
+}
+
+.historia-cta p{
+    max-width:700px;
+    margin:0 auto 30px;
+    color:#666;
+}
+
+.historia-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+@media(max-width:1024px){
+
+    .historia-grid{
+        grid-template-columns:1fr;
+    }
+
+    .historia h2{
+        font-size:38px;
+    }
+
+    .historia-cta{
+        padding:40px 25px;
+    }
+
+    .historia-cta h3{
+        font-size:30px;
+    }
+
+}
