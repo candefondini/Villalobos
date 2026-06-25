@@ -1,108 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".featured-swiper").forEach((swiperEl) => {
+        new Swiper(swiperEl, {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 16,
+            speed: 500,
 
-    if (window.innerWidth > 991) return;
+            pagination: {
+                el: swiperEl.querySelector(".swiper-pagination"),
+                clickable: true,
+            },
 
-    document.querySelectorAll(".featured-box").forEach(box => {
+            navigation: {
+                nextEl: swiperEl.querySelector(".swiper-button-next"),
+                prevEl: swiperEl.querySelector(".swiper-button-prev"),
+            },
 
-        const grid = box.querySelector(".products-grid");
-        const cards = grid.querySelectorAll(".product-card");
+            autoplay: {
+                delay: 4500,
+                disableOnInteraction: false,
+            },
 
-        if (cards.length <= 1) return;
-
-        let current = 0;
-
-        // Crear flechas
-        const prev = document.createElement("button");
-        prev.className = "featured-arrow prev";
-        prev.innerHTML = "❮";
-
-        const next = document.createElement("button");
-        next.className = "featured-arrow next";
-        next.innerHTML = "❯";
-
-        box.appendChild(prev);
-        box.appendChild(next);
-
-        // Crear puntitos
-        const dots = document.createElement("div");
-        dots.className = "featured-dots";
-
-        cards.forEach((_, i) => {
-
-            const dot = document.createElement("span");
-
-            if(i === 0)
-                dot.classList.add("active");
-
-            dot.addEventListener("click", () => {
-
-                current = i;
-                goToSlide();
-
-            });
-
-            dots.appendChild(dot);
-
+            breakpoints: {
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 18,
+                    loop: false,
+                    allowTouchMove: false,
+                    autoplay: false,
+                }
+            }
         });
-
-        box.appendChild(dots);
-
-        const updateDots = () => {
-
-            dots.querySelectorAll("span").forEach((dot,index)=>{
-
-                dot.classList.toggle("active",index===current);
-
-            });
-
-        };
-
-        const goToSlide = () => {
-
-            grid.scrollTo({
-
-                left: cards[current].offsetLeft - grid.offsetLeft,
-                behavior:"smooth"
-
-            });
-
-            updateDots();
-
-        };
-
-        prev.addEventListener("click",()=>{
-
-            current--;
-
-            if(current < 0)
-                current = cards.length-1;
-
-            goToSlide();
-
-        });
-
-        next.addEventListener("click",()=>{
-
-            current++;
-
-            if(current >= cards.length)
-                current = 0;
-
-            goToSlide();
-
-        });
-
-        setInterval(()=>{
-
-            current++;
-
-            if(current >= cards.length)
-                current = 0;
-
-            goToSlide();
-
-        },5000);
-
     });
-
 });

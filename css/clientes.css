@@ -1,81 +1,322 @@
+/*=========================
+CLIENTES
+=========================*/
+
 .clientes{
-    padding:90px 0;
+    padding:0px 0 40px;
     background:#fff;
 }
 
-.clientes-title{
+.clientes-box{
+
+    background:#fafafa;
+    border-radius:28px;
+
+     padding:70px 60px 35px;
+
+    overflow:hidden;
+    position:relative;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.05);
+
+}
+
+.clientes-box::before{
+
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+
+    width:220px;
+    height:100%;
+
+    background:linear-gradient(to right,#fafafa 0%,rgba(250,250,250,0));
+
+    z-index:5;
+
+}
+
+.clientes-box::after{
+
+    content:"";
+    position:absolute;
+    right:0;
+    top:0;
+
+    width:220px;
+    height:100%;
+
+    background:linear-gradient(to left,#fafafa 0%,rgba(250,250,250,0));
+
+    z-index:5;
+
+}
+
+.clientes-tag{
+
+    display:block;
+
     text-align:center;
-    color:#ea4b3c;
-    font-size:42px;
+
+    color:#555;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.clientes-title{
+
+    text-align:center;
+
+    font-size:60px;
+
+    line-height:1.05;
+
     font-weight:900;
-    margin-bottom:60px;
+
+    color:#171717;
+
+    margin-bottom:20px;
+
+}
+
+.clientes-title span{
+
+    color:#ea4b3c;
+
+}
+
+.clientes-text{
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:21px;
+
+    max-width:780px;
+
+    margin:0 auto 25px;
+
+    line-height:1.6;
+
 }
 
 .logos-slider{
+
     overflow:hidden;
     width:100%;
+
 }
 
 .logos-track{
+
     display:flex;
-    align-items:center;
-    gap:90px;
+
+    gap:28px;
 
     width:max-content;
 
-    animation: logosScroll 30s linear infinite;
+    animation:clientesScroll 30s linear infinite;
+
 }
 
-.logos-track img{
-    height:80px;
-    width:auto;
+.logo-card{
 
-    filter: grayscale(100%);
+    width:230px;
+
+    height:160px;
+
+    border-radius:22px;
+
+    background:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.logo-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.logo-card img{
+
+    max-width:150px;
+
+    max-height:75px;
+
+    filter:grayscale(100%);
+
     opacity:.75;
 
-    transition:.3s;
+    transition:.35s;
+
 }
 
-.logos-track img:hover{
+.logo-card:hover img{
+
     filter:none;
+
     opacity:1;
+
 }
 
-@keyframes logosScroll{
+@keyframes clientesScroll{
 
     from{
+
         transform:translateX(0);
+
     }
 
     to{
-        transform:translateX(-50%);
+
+        transform:translateX(calc(-50% - 14px));
+
     }
 
 }
-/* =========================
-   MOBILE CLIENTES
-========================= */
+.logos-slider{
+    overflow:hidden;
+    width:100%;
+    display:flex;
+    align-items:center;
+    height:160px;   /* desktop */
+}
 
-@media (max-width: 768px){
+.logos-track{
+    align-items:center;
+}
+
+/*=========================
+MOBILE
+=========================*/
+
+@media (max-width:768px){
+
+   
 
     .clientes{
-        padding:60px 0;
+        padding:-10px 0 20px;
+    }
+
+
+
+    .clientes-box{
+        padding:40px 20px 20px;
+        border-radius:18px;
+    }
+
+    /* En mobile no hace falta el fade */
+    .clientes-box::before,
+    .clientes-box::after{
+        display:none;
+    }
+
+    .clientes-tag{
+        flex-direction:column;
+        gap:10px;
+        margin-bottom:18px;
+    }
+
+    .clientes-icon{
+        width:34px;
+        height:34px;
     }
 
     .clientes-title{
-        font-size:30px;
-        line-height:1.15;
-        padding:0 20px;
-        margin-bottom:35px;
+        font-size:37px;
+        line-height:1.05;
+        margin-bottom:18px;
     }
+
+    .clientes-text{
+        font-size:17px;
+        line-height:1.6;
+        margin:0 auto 18px;
+        max-width:290px;
+    }
+
+    .clientes-line{
+    width:70px;
+    height:3px;
+    background:#ea4b3c;
+    border-radius:10px;
+    margin:0 auto 25px;
+}
 
     .logos-track{
-        gap:40px;
-        animation: logosScroll 20s linear infinite;
+        gap:16px;
+        animation:clientesScroll 18s linear infinite;
     }
 
-    .logos-track img{
-        height:50px;
+    .logo-card{
+        width:140px;
+        height:90px;
+        border-radius:16px;
+    }
+
+    .logo-card img{
+        max-width:90px;
+        max-height:45px;
+    }
+
+
+
+}
+.clientes-tag{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+}
+
+.clientes-icon{
+    width:34px;
+    height:34px;
+    border:2px solid #ea4b3c;
+    border-radius:50%;
+    color:#ea4b3c;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:18px;
+    font-weight:900;
+}
+
+.clientes-line{
+    width:70px;
+    height:3px;
+    background:#ea4b3c;
+    border-radius:10px;
+    margin:0 auto 60px;
+}@media (max-width:768px){
+
+    .logos-slider{
+        height:90px;
     }
 
 }
