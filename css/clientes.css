@@ -52,3 +52,30 @@
     }
 
 }
+/* =========================
+   MOBILE CLIENTES
+========================= */
+
+@media (max-width: 768px){
+
+    .clientes{
+        padding:60px 0;
+    }
+
+    .clientes-title{
+        font-size:30px;
+        line-height:1.15;
+        padding:0 20px;
+        margin-bottom:35px;
+    }
+
+    .logos-track{
+        gap:40px;
+        animation: logosScroll 20s linear infinite;
+    }
+
+    .logos-track img{
+        height:50px;
+    }
+
+}

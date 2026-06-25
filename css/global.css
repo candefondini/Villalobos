@@ -42,3 +42,11 @@ img{
     font-weight:800;
     display:inline-block;
 }
+body{
+    background:#fff;
+}
+
+.landing-test h1{
+    color:red;
+    font-size:60px;
+}

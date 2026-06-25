@@ -88,3 +88,132 @@
     }
 
 }
+/* =========================
+   MOBILE HISTORIA
+========================= */
+
+@media (max-width: 768px){
+
+    .historia{
+        padding:50px 0 0;
+    }
+
+    .historia-grid{
+        display:flex;
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .historia-content{
+        padding:0 20px;
+    }
+
+    .historia-tag{
+        font-size:12px;
+        margin-bottom:10px;
+    }
+
+    .historia h2{
+        font-size:30px;
+        line-height:1.1;
+        margin-bottom:20px;
+    }
+
+    .historia p{
+        font-size:15px;
+        line-height:1.6;
+        margin-bottom:15px;
+    }
+
+    .historia-image img{
+        width:100%;
+        border-radius:20px;
+    }
+
+    /* CTA */
+
+    .historia-cta{
+        margin-top:35px;
+        padding:35px 20px;
+        border-radius:20px;
+    }
+
+    .historia-cta h3{
+        font-size:26px;
+        line-height:1.15;
+        margin-bottom:12px;
+    }
+
+    .historia-cta p{
+        font-size:14px;
+        line-height:1.5;
+        margin-bottom:25px;
+    }
+
+    .historia-buttons{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .historia-buttons .btn-primary,
+    .historia-buttons .btn-outline{
+        width:100%;
+        text-align:center;
+    }
+
+}
+.historia-slider{
+    position:relative;
+    width:100%;
+    border-radius:24px;
+    overflow:hidden;
+}
+
+.historia-slide{
+    display:none;
+}
+
+.historia-slide.active{
+    display:block;
+}
+
+.historia-slide img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    display:block;
+    border-radius:24px;
+}
+
+.historia-prev,
+.historia-next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:46px;
+    height:46px;
+    border:none;
+    border-radius:50%;
+    background:#fff;
+    color:#ea4b3c;
+    font-size:22px;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    z-index:5;
+}
+
+.historia-prev{
+    left:18px;
+}
+
+.historia-next{
+    right:18px;
+}
+
+@media(max-width:768px){
+
+    .historia-slide img{
+        height:320px;
+    }
+
+}

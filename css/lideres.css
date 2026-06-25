@@ -93,3 +93,63 @@
     }
 
 }
+/* =========================
+   MOBILE LIDERES
+========================= */
+
+@media (max-width: 768px){
+
+    .lideres{
+        padding:60px 0;
+    }
+
+    .lideres-grid{
+        display:flex;
+        flex-direction:column-reverse;
+        gap:35px;
+    }
+
+    .lideres-image img{
+        width:100%;
+        border-radius:20px;
+    }
+
+    .lideres-content{
+        padding:0 20px;
+    }
+
+    .lideres-tag{
+        font-size:12px;
+        margin-bottom:10px;
+    }
+
+    .lideres h2{
+        font-size:32px;
+        line-height:1.1;
+        margin-bottom:25px;
+    }
+
+    .lideres-list li{
+        font-size:15px;
+        line-height:1.5;
+        padding-left:30px;
+        margin-bottom:16px;
+    }
+
+    .lideres-list li::before{
+        font-size:18px;
+    }
+
+    .lideres-buttons{
+        flex-direction:column;
+        gap:12px;
+        margin-top:30px;
+    }
+
+    .lideres-buttons .btn-primary,
+    .lideres-buttons .btn-outline{
+        width:100%;
+        text-align:center;
+    }
+
+}
